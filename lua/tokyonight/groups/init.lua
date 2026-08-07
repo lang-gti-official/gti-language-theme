@@ -94,6 +94,7 @@ end
 function M.setup(colors, opts)
   local groups = {
     base = true,
+    gti = true,
     kinds = true,
     semantic_tokens = true,
     treesitter = true,

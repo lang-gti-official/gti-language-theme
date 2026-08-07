@@ -1,7 +1,7 @@
 local Config = require("tokyonight.config")
 local Groups = require("tokyonight.groups")
 
-local base = { "base", "kinds", "semantic_tokens", "treesitter" }
+local base = { "base", "gti", "kinds", "semantic_tokens", "treesitter" }
 
 before_each(function()
   Config.setup()
