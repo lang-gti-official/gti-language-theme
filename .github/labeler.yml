@@ -1,28 +1,32 @@
 core:
   - all:
       - changed-files:
-          - any-glob-to-any-file: "lua/tokyonight/**"
+          - any-glob-to-any-file: "lua/github_theme/**"
           - all-globs-to-all-files:
-              - "!lua/tokyonight/groups/**"
-              - "!lua/tokyonight/colors/**"
-              - "!lua/tokyonight/extra/**"
+              - "!lua/github_theme/groups/**"
+              - "!lua/github_theme/colors.lua"
+              - "!lua/github_theme/palette.lua"
+              - "!lua/github_theme/extra/**"
 
 extras:
   - changed-files:
-      - any-glob-to-any-file: "lua/tokyonight/extra/**"
+      - any-glob-to-any-file: "lua/github_theme/extra/**"
 
 groups:
   - changed-files:
-      - any-glob-to-any-file: "lua/tokyonight/groups/**"
+      - any-glob-to-any-file: "lua/github_theme/groups/**"
 
 base:
   - changed-files:
       - any-glob-to-any-file:
-          - "lua/tokyonight/groups/base.lua"
-          - "lua/tokyonight/groups/kinds.lua"
-          - "lua/tokyonight/groups/treesitter.lua"
-          - "lua/tokyonight/groups/semantic_tokens.lua"
+          - "lua/github_theme/groups/base.lua"
+          - "lua/github_theme/groups/kinds.lua"
+          - "lua/github_theme/groups/treesitter.lua"
+          - "lua/github_theme/groups/semantic_tokens.lua"
+          - "lua/github_theme/groups/gti.lua"
 
 colors:
   - changed-files:
-      - any-glob-to-any-file: "lua/tokyonight/colors/**"
+      - any-glob-to-any-file:
+          - "lua/github_theme/colors.lua"
+          - "lua/github_theme/palette.lua"

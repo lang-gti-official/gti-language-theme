@@ -1,0 +1,28 @@
+{
+  "name": "GitHub",
+  "version": 1,
+  "shared": {
+    "backgroundColor": "#24292e",
+    "colorPaletteOverrides": [
+      "#1d2125",
+      "#ff7b72",
+      "#e6edf3",
+      "#FFAB70",
+      "#388bfd",
+      "#bb9af7",
+      "#7dcfff",
+      "#e1e7ed",
+      "#414868",
+      "#ff928c",
+      "#f8fbfd",
+      "#ffbe98",
+      "#5d98ff",
+      "#c7a9ff",
+      "#a4daff",
+      "#e6edf3",
+    ],
+    "cursorColor": "#e6edf3",
+    "foregroundColor": "#e6edf3"
+  }
+}
+

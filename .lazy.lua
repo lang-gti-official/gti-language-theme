@@ -1,14 +1,14 @@
 local M = {
-  module = "tokyonight",
-  colorscheme = "tokyonight",
-  opts = { style = "github", plugins = { all = true } },
+  module = "github_theme",
+  colorscheme = "github",
+  opts = { plugins = { all = true } },
   globals = { vim = vim },
   cache = {}, ---@type table<string, boolean>
 }
 
 function M.reset()
-  require("tokyonight.util").cache.clear()
-  local colors = require("tokyonight.colors").setup()
+  require("github_theme.util").cache.clear()
+  local colors = require("github_theme.colors").setup()
   M.globals.colors = colors
   M.globals.c = colors
 end

@@ -1,84 +1,57 @@
-local Config = require("tokyonight.config")
-local Init = require("tokyonight")
+local Config = require("github_theme.config")
+
+local function minimal_config(overrides)
+  return vim.tbl_deep_extend("force", {
+    cache = false,
+    plugins = { all = false, auto = false },
+  }, overrides or {})
+end
 
 before_each(function()
-  vim.o.background = "dark"
   vim.cmd.colorscheme("default")
-  Config.setup()
-  Init.styles = {}
+  vim.o.background = "dark"
+  Config.setup(minimal_config())
 end)
 
-it("did prper init", function()
-  assert.same({}, Init.styles)
-  assert.same("default", vim.g.colors_name)
+it("exposes one GitHub theme", function()
+  assert.is_table(require("github_theme"))
+  assert.is_nil(Config.defaults.style)
+  assert.is_nil(Config.defaults["light_" .. "style"])
+  assert.is_nil(Config.defaults["day_" .. "brightness"])
+  assert.same({ "github.lua" }, vim.fn.readdir("colors"))
+end)
+
+it("loads the GitHub palette from either background", function()
+  vim.o.background = "light"
+  vim.cmd.colorscheme("github")
+
   assert.same("dark", vim.o.background)
+  assert.same("github", vim.g.colors_name)
+  assert.is_true(vim.o.termguicolors)
+
+  local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
+  assert.same(tonumber("e6edf3", 16), normal.fg)
+  assert.same(tonumber("24292e", 16), normal.bg)
 end)
 
-describe("loading respects vim.o.background", function()
-  it("= dark", function()
-    vim.o.background = "dark"
-    vim.cmd.colorscheme("tokyonight")
-    assert.same("dark", vim.o.background)
-    assert.same("tokyonight-moon", vim.g.colors_name)
-  end)
+it("keeps color and highlight overrides", function()
+  local saw_colors = false
+  local saw_highlights = false
+  Config.setup(minimal_config({
+    on_colors = function(colors)
+      saw_colors = true
+      colors.blue = "#123456"
+    end,
+    on_highlights = function(highlights, colors)
+      saw_highlights = true
+      highlights.GitHubThemeTest = { fg = colors.blue }
+    end,
+  }))
 
-  it("= light", function()
-    vim.o.background = "light"
-    vim.cmd.colorscheme("tokyonight")
-    assert.same("light", vim.o.background)
-    assert.same("tokyonight-day", vim.g.colors_name)
-  end)
+  vim.cmd.colorscheme("github")
 
-  it("= dark with night", function()
-    vim.o.background = "dark"
-    vim.cmd.colorscheme("tokyonight-night")
-    assert.same("dark", vim.o.background)
-    assert.same("tokyonight-night", vim.g.colors_name)
-  end)
-
-  it("= dark with day", function()
-    vim.o.background = "dark"
-    vim.cmd.colorscheme("tokyonight-day")
-    assert.same("light", vim.o.background)
-    assert.same("tokyonight-day", vim.g.colors_name)
-  end)
-
-  it("= light with night", function()
-    vim.o.background = "light"
-    vim.cmd.colorscheme("tokyonight-night")
-    assert.same("dark", vim.o.background)
-    assert.same("tokyonight-night", vim.g.colors_name)
-  end)
-
-  it("= light with day", function()
-    vim.o.background = "light"
-    vim.cmd.colorscheme("tokyonight-day")
-    assert.same("light", vim.o.background)
-    assert.same("tokyonight-day", vim.g.colors_name)
-  end)
-
-  it(" and switches to light", function()
-    vim.o.background = "dark"
-    vim.cmd.colorscheme("tokyonight-night")
-    vim.o.background = "light"
-    assert.same("light", vim.o.background)
-    assert.same("tokyonight-day", vim.g.colors_name)
-  end)
-
-  it(" and switches to dark", function()
-    vim.o.background = "light"
-    vim.cmd.colorscheme("tokyonight")
-    vim.o.background = "dark"
-    assert.same("dark", vim.o.background)
-    assert.same("tokyonight-moon", vim.g.colors_name)
-  end)
-
-  it(" and remembers dark", function()
-    vim.o.background = "dark"
-    vim.cmd.colorscheme("tokyonight-night")
-    vim.o.background = "light"
-    vim.o.background = "dark"
-    assert.same("dark", vim.o.background)
-    assert.same("tokyonight-night", vim.g.colors_name)
-  end)
+  assert.is_true(saw_colors)
+  assert.is_true(saw_highlights)
+  local custom = vim.api.nvim_get_hl(0, { name = "GitHubThemeTest", link = false })
+  assert.same(tonumber("123456", 16), custom.fg)
 end)

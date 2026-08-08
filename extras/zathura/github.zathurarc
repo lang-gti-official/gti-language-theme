@@ -1,0 +1,38 @@
+# GitHub color theme for Zathura
+# Swaps Foreground for Background to get a light version if the user prefers
+#
+# GitHub color theme
+#
+set notification-error-bg "#ff7b72"
+set notification-error-fg "#e6edf3"
+set notification-warning-bg "#FFAB70"
+set notification-warning-fg "#414868"
+set notification-bg "#24292e"
+set notification-fg "#e6edf3"
+set completion-bg "#24292e"
+set completion-fg "#e1e7ed"
+set completion-group-bg "#24292e"
+set completion-group-fg "#e1e7ed"
+set completion-highlight-bg "#414868"
+set completion-highlight-fg "#e6edf3"
+set index-bg "#24292e"
+set index-fg "#e6edf3"
+set index-active-bg "#414868"
+set index-active-fg "#e6edf3"
+set inputbar-bg "#24292e"
+set inputbar-fg "#e6edf3"
+set statusbar-bg "#24292e"
+set statusbar-fg "#e6edf3"
+set highlight-color "#FFAB70"
+set highlight-active-color "#e6edf3"
+set default-bg "#24292e"
+set default-fg "#e6edf3"
+set render-loading true
+set render-loading-fg "#24292e"
+set render-loading-bg "#e6edf3"
+#
+# Recolor mode settings
+# <C-r> to switch modes
+#
+set recolor-lightcolor "#24292e"
+set recolor-darkcolor "#e6edf3"

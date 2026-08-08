@@ -1,0 +1,12 @@
+assistant-output-color: "#e6edf3"
+
+completion-menu-color: "#e6edf3"
+completion-menu-bg-color: "#1f2428"
+completion-menu-current-color: "#e6edf3"
+completion-menu-current-bg-color: "#343b42"
+
+tool-error-color: "#da3633"
+tool-output-color: "#388bfd"
+tool-warning-color: "#FFAB70"
+
+user-input-color: "#e6edf3"

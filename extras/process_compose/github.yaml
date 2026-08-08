@@ -1,0 +1,36 @@
+style:
+  name: github
+  body:
+    fgColor: '#e6edf3'
+    bgColor: '#1f2428'
+    secondaryTextColor: '#e1e7ed'
+    tertiaryTextColor: '#8b949e'
+    borderColor: '#6e7681'
+  stat_table:
+    keyFgColor: '#FFAB70'
+    valueFgColor: '#e6edf3'
+    logoColor: '#FFAB70'
+  proc_table:
+    fgColor: '#388bfd'
+    fgWarning: '#FFAB70'
+    fgPending: '#545c7e'
+    fgCompleted: '#e6edf3'
+    fgError: '#da3633'
+    headerFgColor: '#e6edf3'
+  help:
+    fgColor: '#58a6ff'
+    keyColor: '#e6edf3'
+    hlColor: '#e6edf3'
+    categoryFgColor: '#79b8ff'
+  dialog:
+    fgColor: '#58a6ff'
+    bgColor: '#1d2125'
+    contrastBgColor: '#24292e'
+    attentionBgColor: '#da3633'
+    buttonFgColor: '#1d2125'
+    buttonBgColor: '#343b42'
+    buttonFocusFgColor: '#1d2125'
+    buttonFocusBgColor: '#388bfd'
+    labelFgColor: '#FFAB70'
+    fieldFgColor: '#1d2125'
+    fieldBgColor: '#394b70'

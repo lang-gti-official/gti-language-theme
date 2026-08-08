@@ -1,7 +1,7 @@
-local Colors = require("tokyonight.colors")
-local Config = require("tokyonight.config")
-local Groups = require("tokyonight.groups")
-local Theme = require("tokyonight.theme")
+local Colors = require("github_theme.colors")
+local Config = require("github_theme.config")
+local Groups = require("github_theme.groups")
+local Theme = require("github_theme.theme")
 
 local expected = {
   ["@lsp.type.keyword.gti"] = "@none",
@@ -17,7 +17,6 @@ local expected = {
 
 local function options()
   return Config.extend({
-    style = "github",
     cache = false,
     plugins = { all = false, auto = false },
   })
