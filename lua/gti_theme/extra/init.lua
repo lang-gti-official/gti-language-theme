@@ -77,11 +77,7 @@ function M.render(extra, colors, groups, opts)
   export_colors._style_name = "GTI"
   export_colors._name = "gti"
   export_colors._style = "gti"
-  return require("gti_theme.extra." .. extra).generate(
-    export_colors,
-    vim.deepcopy(groups),
-    vim.deepcopy(opts)
-  )
+  return require("gti_theme.extra." .. extra).generate(export_colors, vim.deepcopy(groups), vim.deepcopy(opts))
 end
 
 function M.setup()

@@ -27,13 +27,7 @@ local function replace_section(contents, name, replacement)
   assert(open_start and open_end, "missing " .. open)
   local close_start, close_end = contents:find(close, open_end + 1, true)
   assert(close_start and close_end, "missing " .. close)
-  return contents:sub(1, open_start - 1)
-    .. open
-    .. "\n"
-    .. replacement
-    .. "\n"
-    .. close
-    .. contents:sub(close_end + 1)
+  return contents:sub(1, open_start - 1) .. open .. "\n" .. replacement .. "\n" .. close .. contents:sub(close_end + 1)
 end
 
 function M.config()

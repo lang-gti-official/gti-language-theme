@@ -19,10 +19,10 @@ function M.generate(colors, groups, opts)
   end
   groups = Groups.setup(colors, opts)
   local lines = {
-    ([[
+    [[
 hi clear
 let g:colors_name = "gti"
-  ]]),
+  ]],
   }
 
   groups = vim.deepcopy(groups)
