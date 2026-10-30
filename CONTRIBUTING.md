@@ -2,15 +2,15 @@
 
 This is a single-theme codebase. Public names are fixed:
 
-- Lua module: `github_theme`
-- Neovim colorscheme: `github`
-- Integration theme name: `github`
+- Lua module: `gti_theme`
+- Neovim colorscheme: `gti`
+- Integration theme name: `gti`
 
 There are no light/dark variants or compatibility entrypoints.
 
 ## Highlight architecture
 
-`lua/github_theme/palette.lua` contains literal colors. `colors.lua` derives
+`lua/gti_theme/palette.lua` contains literal colors. `colors.lua` derives
 backgrounds, diagnostics, diffs, and terminal colors. `theme.lua` combines those
 colors with the modules under `groups/` and applies the resulting Neovim
 highlights.
@@ -29,14 +29,14 @@ by changing shared semantic-token or Tree-sitter groups.
 
 ## Plugin groups
 
-Each supported plugin has one module in `lua/github_theme/groups/`:
+Each supported plugin has one module in `lua/gti_theme/groups/`:
 
 ```lua
 local M = {}
 
 M.url = "https://github.com/owner/plugin.nvim"
 
----@type github_theme.HighlightsFn
+---@type gti_theme.HighlightsFn
 function M.get(colors, opts)
   return {
     PluginHeading = { fg = colors.blue, bold = true },
@@ -46,19 +46,19 @@ end
 return M
 ```
 
-Register it in `Groups.plugins` inside `lua/github_theme/groups/init.lua` and add
+Register it in `Groups.plugins` inside `lua/gti_theme/groups/init.lua` and add
 or update tests. Reuse palette fields and existing highlight links instead of
 duplicating literal colors.
 
 ## Exporters
 
-Each exporter under `lua/github_theme/extra/` receives the same derived colors
-used by Neovim. Register it in `github_theme.extra.extras`; the output path is
-`extras/<tool>/github.<extension>` (or the tool-specific registered subpath).
+Each exporter under `lua/gti_theme/extra/` receives the same derived colors
+used by Neovim. Register it in `gti_theme.extra.extras`; the output path is
+`extras/<tool>/gti.<extension>` (or the tool-specific registered subpath).
 Exporter modules must be side-effect-free when required.
 
-Do not add another palette variant. A new tool should receive the existing
-GitHub palette.
+Keep the single GTI palette coherent across Neovim and exports. A new tool
+should receive the existing palette.
 
 ## Verification
 

@@ -1,0 +1,10 @@
+GTI Theme
+Copyright (c) GTI language contributors
+
+This project began as a fork of Tokyo Night for Neovim by Folke Lemaitre:
+https://github.com/folke/tokyonight.nvim
+
+The original plugin architecture and retained code are provided under the
+Apache License, Version 2.0. The GTI palette, GTI semantic-token presentation,
+and subsequent changes are maintained by the GTI language contributors.
+See LICENSE for the license terms.

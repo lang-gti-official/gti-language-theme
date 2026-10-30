@@ -1,0 +1,73 @@
+# Theme: gti
+# By: Folke Lemaitre
+
+theme[main_bg]="#24292e"
+theme[main_fg]="#e6edf3"
+
+# Title color for boxes
+theme[title]="#e6edf3"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#f0883e"
+
+# Selected item in processes box
+theme[selected_bg]="#343b42"
+theme[selected_fg]="#7dcfff"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#7dcfff"
+
+# Cpu box outline color
+theme[cpu_box]="#4e8dd5"
+
+# Memory/disks box outline color
+theme[mem_box]="#4e8dd5"
+
+# Net up/down box outline color
+theme[net_box]="#4e8dd5"
+
+# Processes box outline color
+theme[proc_box]="#4e8dd5"
+
+# Box divider line and small boxes line color
+theme[div_line]="#4e8dd5"
+
+# Temperature graph colors
+theme[temp_start]="#e6edf3"
+theme[temp_mid]="#FFAB70"
+theme[temp_end]="#ff7b72"
+
+# CPU graph colors
+theme[cpu_start]="#e6edf3"
+theme[cpu_mid]="#FFAB70"
+theme[cpu_end]="#ff7b72"
+
+# Mem/Disk free meter
+theme[free_start]="#e6edf3"
+theme[free_mid]="#FFAB70"
+theme[free_end]="#ff7b72"
+
+# Mem/Disk cached meter
+theme[cached_start]="#e6edf3"
+theme[cached_mid]="#FFAB70"
+theme[cached_end]="#ff7b72"
+
+# Mem/Disk available meter
+theme[available_start]="#e6edf3"
+theme[available_mid]="#FFAB70"
+theme[available_end]="#ff7b72"
+
+# Mem/Disk used meter
+theme[used_start]="#e6edf3"
+theme[used_mid]="#FFAB70"
+theme[used_end]="#ff7b72"
+
+# Download graph colors
+theme[download_start]="#e6edf3"
+theme[download_mid]="#FFAB70"
+theme[download_end]="#ff7b72"
+
+# Upload graph colors
+theme[upload_start]="#e6edf3"
+theme[upload_mid]="#FFAB70"
+theme[upload_end]="#ff7b72"

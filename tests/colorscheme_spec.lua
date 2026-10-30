@@ -1,4 +1,4 @@
-local Config = require("github_theme.config")
+local Config = require("gti_theme.config")
 
 local function minimal_config(overrides)
   return vim.tbl_deep_extend("force", {
@@ -13,20 +13,20 @@ before_each(function()
   Config.setup(minimal_config())
 end)
 
-it("exposes one GitHub theme", function()
-  assert.is_table(require("github_theme"))
+it("exposes one GTI theme", function()
+  assert.is_table(require("gti_theme"))
   assert.is_nil(Config.defaults.style)
   assert.is_nil(Config.defaults["light_" .. "style"])
   assert.is_nil(Config.defaults["day_" .. "brightness"])
-  assert.same({ "github.lua" }, vim.fn.readdir("colors"))
+  assert.same({ "gti.lua" }, vim.fn.readdir("colors"))
 end)
 
-it("loads the GitHub palette from either background", function()
+it("loads the GTI palette from either background", function()
   vim.o.background = "light"
-  vim.cmd.colorscheme("github")
+  vim.cmd.colorscheme("gti")
 
   assert.same("dark", vim.o.background)
-  assert.same("github", vim.g.colors_name)
+  assert.same("gti", vim.g.colors_name)
   assert.is_true(vim.o.termguicolors)
 
   local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
@@ -44,14 +44,14 @@ it("keeps color and highlight overrides", function()
     end,
     on_highlights = function(highlights, colors)
       saw_highlights = true
-      highlights.GitHubThemeTest = { fg = colors.blue }
+      highlights.GTIThemeTest = { fg = colors.blue }
     end,
   }))
 
-  vim.cmd.colorscheme("github")
+  vim.cmd.colorscheme("gti")
 
   assert.is_true(saw_colors)
   assert.is_true(saw_highlights)
-  local custom = vim.api.nvim_get_hl(0, { name = "GitHubThemeTest", link = false })
+  local custom = vim.api.nvim_get_hl(0, { name = "GTIThemeTest", link = false })
   assert.same(tonumber("123456", 16), custom.fg)
 end)

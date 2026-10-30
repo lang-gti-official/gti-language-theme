@@ -3,7 +3,7 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "extra-files": ["lua/github_theme/config.lua"]
+      "extra-files": ["lua/gti_theme/config.lua"]
     }
   }
 }

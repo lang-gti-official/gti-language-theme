@@ -1,14 +1,14 @@
 local M = {
-  module = "github_theme",
-  colorscheme = "github",
+  module = "gti_theme",
+  colorscheme = "gti",
   opts = { plugins = { all = true } },
   globals = { vim = vim },
   cache = {}, ---@type table<string, boolean>
 }
 
 function M.reset()
-  require("github_theme.util").cache.clear()
-  local colors = require("github_theme.colors").setup()
+  require("gti_theme.util").cache.clear()
+  local colors = require("gti_theme.colors").setup()
   M.globals.colors = colors
   M.globals.c = colors
 end

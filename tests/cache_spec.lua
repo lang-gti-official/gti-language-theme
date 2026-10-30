@@ -1,4 +1,4 @@
-local Util = require("github_theme.util")
+local Util = require("gti_theme.util")
 
 it("uses one readable and clearable cache file", function()
   local path = vim.fn.tempname()

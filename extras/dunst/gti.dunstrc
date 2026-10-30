@@ -1,0 +1,17 @@
+# GTI Theme colors for dunst
+# For more configuration options see https://github.com/dunst-project/dunst/blob/master/dunstrc
+
+[urgency_low]
+    background = "#1f2428"
+    foreground = "#e6edf3"
+    frame_color = "#e6edf3"
+
+[urgency_normal]
+    background = "#24292e"
+    foreground = "#e6edf3"
+    frame_color = "#e6edf3"
+
+[urgency_critical]
+    background = "#343b42"
+    foreground = "#da3633"
+    frame_color = "#da3633"

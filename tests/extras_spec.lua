@@ -1,9 +1,9 @@
-local Extra = require("github_theme.extra")
-local Util = require("github_theme.util")
+local Extra = require("gti_theme.extra")
+local Util = require("gti_theme.util")
 
-it("contains one GitHub artifact for every supported exporter", function()
-  require("github_theme.config").setup()
-  local colors, groups, opts = require("github_theme.theme").setup({
+it("contains one GTI artifact for every supported exporter", function()
+  require("gti_theme.config").setup()
+  local colors, groups, opts = require("gti_theme.theme").setup({
     cache = false,
     plugins = { all = true, auto = false },
   })

@@ -1,0 +1,23 @@
+! GTI Theme colors for Xresources
+
+*background: #24292e
+*foreground: #e6edf3
+
+*color0: #1d2125
+*color1: #ff7b72
+*color2: #e6edf3
+*color3: #FFAB70
+*color4: #388bfd
+*color5: #bb9af7
+*color6: #7dcfff
+*color7: #e1e7ed
+
+*color8: #414868
+*color9: #ff7b72
+*color10: #e6edf3
+*color11: #FFAB70
+*color12: #388bfd
+*color13: #bb9af7
+*color14: #7dcfff
+*color15: #e6edf3
+
