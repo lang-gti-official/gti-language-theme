@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Ask a question
-    url: https://github.com/LukeHHA/github_theme.nvim/discussions
-    about: Use Github discussions instead
+    url: https://github.com/lang-gti-official/gti-language-theme/discussions
+    about: Use GitHub Discussions instead

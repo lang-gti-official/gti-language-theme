@@ -1,32 +1,32 @@
 core:
   - all:
       - changed-files:
-          - any-glob-to-any-file: "lua/github_theme/**"
+          - any-glob-to-any-file: "lua/gti_theme/**"
           - all-globs-to-all-files:
-              - "!lua/github_theme/groups/**"
-              - "!lua/github_theme/colors.lua"
-              - "!lua/github_theme/palette.lua"
-              - "!lua/github_theme/extra/**"
+              - "!lua/gti_theme/groups/**"
+              - "!lua/gti_theme/colors.lua"
+              - "!lua/gti_theme/palette.lua"
+              - "!lua/gti_theme/extra/**"
 
 extras:
   - changed-files:
-      - any-glob-to-any-file: "lua/github_theme/extra/**"
+      - any-glob-to-any-file: "lua/gti_theme/extra/**"
 
 groups:
   - changed-files:
-      - any-glob-to-any-file: "lua/github_theme/groups/**"
+      - any-glob-to-any-file: "lua/gti_theme/groups/**"
 
 base:
   - changed-files:
       - any-glob-to-any-file:
-          - "lua/github_theme/groups/base.lua"
-          - "lua/github_theme/groups/kinds.lua"
-          - "lua/github_theme/groups/treesitter.lua"
-          - "lua/github_theme/groups/semantic_tokens.lua"
-          - "lua/github_theme/groups/gti.lua"
+          - "lua/gti_theme/groups/base.lua"
+          - "lua/gti_theme/groups/kinds.lua"
+          - "lua/gti_theme/groups/treesitter.lua"
+          - "lua/gti_theme/groups/semantic_tokens.lua"
+          - "lua/gti_theme/groups/gti.lua"
 
 colors:
   - changed-files:
       - any-glob-to-any-file:
-          - "lua/github_theme/colors.lua"
-          - "lua/github_theme/palette.lua"
+          - "lua/gti_theme/colors.lua"
+          - "lua/gti_theme/palette.lua"

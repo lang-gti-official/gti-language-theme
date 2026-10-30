@@ -1,7 +1,7 @@
-local Colors = require("github_theme.colors")
-local Config = require("github_theme.config")
-local Groups = require("github_theme.groups")
-local Theme = require("github_theme.theme")
+local Colors = require("gti_theme.colors")
+local Config = require("gti_theme.config")
+local Groups = require("gti_theme.groups")
+local Theme = require("gti_theme.theme")
 
 local expected = {
   ["@lsp.type.keyword.gti"] = "@none",

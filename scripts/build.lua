@@ -1,2 +1,2 @@
-require("github_theme.extra").setup()
+require("gti_theme.extra").setup()
 vim.cmd.quitall()

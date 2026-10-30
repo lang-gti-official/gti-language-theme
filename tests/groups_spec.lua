@@ -1,5 +1,5 @@
-local Config = require("github_theme.config")
-local Groups = require("github_theme.groups")
+local Config = require("gti_theme.config")
+local Groups = require("gti_theme.groups")
 
 local base = vim.tbl_keys(Groups.core)
 table.sort(base)
@@ -9,7 +9,7 @@ before_each(function()
 end)
 
 describe("group is valid", function()
-  for name in vim.fs.dir("lua/github_theme/groups") do
+  for name in vim.fs.dir("lua/gti_theme/groups") do
     name = name:match("(.+)%.lua$")
     if name and name ~= "init" and not vim.list_contains(base, name) then
       it(name .. " has an url", function()
@@ -48,7 +48,7 @@ describe("group config", function()
     for _, name in pairs(Groups.plugins) do
       all[name] = true
     end
-    local colors = require("github_theme.colors").setup(opts)
+    local colors = require("gti_theme.colors").setup(opts)
     local _, groups = Groups.setup(colors, opts)
     assert.same(all, groups)
   end)
@@ -59,7 +59,7 @@ describe("group config", function()
     for _, name in ipairs(base) do
       all[name] = true
     end
-    local colors = require("github_theme.colors").setup(opts)
+    local colors = require("gti_theme.colors").setup(opts)
     local _, groups = Groups.setup(colors, opts)
     assert.same(all, groups)
   end)
@@ -75,7 +75,7 @@ describe("group config", function()
       all[name] = true
     end
     all.dashboard = true
-    local colors = require("github_theme.colors").setup(opts)
+    local colors = require("gti_theme.colors").setup(opts)
     local _, groups = Groups.setup(colors, opts)
     assert.same(all, groups)
   end)
@@ -93,7 +93,7 @@ describe("group config", function()
       all[name] = true
     end
     all.dashboard = true
-    local colors = require("github_theme.colors").setup(opts)
+    local colors = require("gti_theme.colors").setup(opts)
     local _, groups = Groups.setup(colors, opts)
     assert.same(all, groups)
   end)
